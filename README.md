@@ -1,24 +1,58 @@
-# README
+# Fuzzy Trader
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a tool for new investors in cryptocurrencies.
 
-Things you may want to cover:
+## How it works?
 
-* Ruby version
+The user should add a new transaction, with some infos like: value to be invested, fiat and crypto desired. The app will persist the actual ticker for this transaction.
 
-* System dependencies
+Then, the user can see her wallet. The wallet will display all transactions made by the user.
 
-* Configuration
+The wallet will display to each transaction:
 
-* Database creation
+- The fiat value in the start date;
+- The crypto price in the start date;
+- The fiat value today;
+- The crypto price today.
 
-* Database initialization
+## How to run
 
-* How to run the test suite
+First, you must clone this repository:
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+git clone git@github.com:lhas2/fuzzy_trader.git
+cd fuzzy_trader/
+```
 
-* Deployment instructions
+Then, you must install all dependencies:
 
-* ...
+```bash
+bundle exec bundle install # install Rails deps
+yarn install # install front-end deps
+```
+
+If this is the first time you are running the application, you must create the database and run all migrations:
+
+```bash
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
+
+With the database migrated, you can start the application:
+
+```bash
+bundle exec rails server
+```
+
+## Requirements
+
+- Ruby 2.7+;
+- PostgreSQL;
+
+## Deploy
+
+Just push code to the `master` branch and it will be available in the production environment, thankfully to Heroku.
+
+## Contact
+
+Just ping me at [luizhrqas@gmail.com](luizhrqas@gmail.com). =)
