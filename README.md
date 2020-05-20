@@ -20,7 +20,7 @@ The wallet will display to each transaction:
 First, you must clone this repository:
 
 ```bash
-git clone git@github.com:lhas2/fuzzy_trader.git
+git clone git@github.com:lhas2/fuzzy-trader.git
 cd fuzzy_trader/
 ```
 

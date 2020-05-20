@@ -1,0 +1,11 @@
+.alert {
+    border: 1px solid #FFF;
+    padding: 12px;  
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.alert--info {
+    background: #5a7acf;
+    color: #FFF;
+}

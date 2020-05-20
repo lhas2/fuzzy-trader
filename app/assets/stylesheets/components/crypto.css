@@ -1,0 +1,20 @@
+.crypto {
+    display: block;
+    margin: 10px 0px;
+}
+
+.crypto em {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.crypto strong {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.crypto strong img {
+    margin-right: 10px;
+}

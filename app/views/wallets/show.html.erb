@@ -3,5 +3,14 @@
 <div class="container">
     <h1>Your wallet</h1>
     <%= render partial: "shared/alert" %>
+    <% CRYPTO_CURRENCIES.each do |crypto| %>
+        <div class="crypto">
+            <p>
+                <strong><%= image_tag "#{crypto.downcase}.png" %> <%= crypto_balance(@transactions, crypto) %> <%= crypto %> </strong>
+                <em>Current price: 7300 USD</em>
+            </p>
+        </div>
+    <% end %>
+    <p>Your current balance: <strong>123 USD</strong></p>
     <a href="<%= url_for root_path %>" class="button button--flat">Back</a>
 </div>
