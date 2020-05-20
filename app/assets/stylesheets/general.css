@@ -1,0 +1,16 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #152349;
+    color: #FFF;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
