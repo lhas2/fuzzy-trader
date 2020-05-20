@@ -32,3 +32,8 @@
     color: red;
     display: block;
 }
+
+.simple_form .input.radio_buttons {
+    display: flex;
+    flex-direction: column;
+}

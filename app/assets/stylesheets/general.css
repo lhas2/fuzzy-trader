@@ -13,11 +13,23 @@ body {
 
 .container {
     height: 100vh;
-    min-height: 400px;
     padding: 20px;
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+}
+
+.container--center {
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+@media (min-width: 768px) {
+  
+.container {
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}  
 }

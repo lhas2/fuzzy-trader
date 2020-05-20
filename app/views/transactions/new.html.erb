@@ -3,8 +3,10 @@
     <h1>Add new transaction</h1>
     <div class="question">
         <p>I want to invest</p>
-        <%= f.input :fiat_value, label: false, as: :string %>
-        <%= f.input :fiat_currency, as: :select, label: false, collection: FIAT_CURRENCIES, default: "BRL" %>
+        <div class="question__fiat">
+            <%= f.input :fiat_value, label: false, as: :string %>
+            <%= f.input :fiat_currency, as: :select, label: false, collection: FIAT_CURRENCIES, default: "BRL" %>
+        </div>
         <p>in...</p>
         <%= f.input :crypto_currency, label: false, as: :radio_buttons, collection: CRYPTO_CURRENCIES %>
     </div>

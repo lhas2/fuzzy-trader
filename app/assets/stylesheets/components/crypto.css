@@ -7,12 +7,15 @@
     display: block;
     font-size: 12px;
     font-weight: 300;
+    font-family: 'DM Mono', monospace;
 }
 
 .crypto strong {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    font-family: 'DM Mono', monospace;
 }
 
 .crypto strong img {
