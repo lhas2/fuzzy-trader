@@ -36,6 +36,7 @@ If this is the first time you are running the application, you must create the d
 ```bash
 bundle exec rake db:create
 bundle exec rake db:migrate
+bundle exec rake db:seed
 ```
 
 With the database migrated, you can start the application:
