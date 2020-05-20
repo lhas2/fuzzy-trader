@@ -1,0 +1,34 @@
+.simple_form input[type="number"],
+.simple_form input[type="text"],
+.simple_form select {
+    background: transparent;
+    border-radius: 6px;
+    margin: 10px 0px;
+    border: 1px solid #FFF;
+    height: 40px;
+    color: #FFF;
+    padding: 6px;
+}
+
+.simple_form option {
+    color: #222;
+}
+
+.simple_form input[type="text"]:focus,
+.simple_form input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.simple_form span.radio {
+    margin: 10px;
+    display: inline-block;
+}
+.simple_form span.radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.simple_form div.input .error {
+    margin-left: 10px;
+    color: red;
+    display: block;
+}
