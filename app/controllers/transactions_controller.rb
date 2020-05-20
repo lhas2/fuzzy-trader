@@ -5,8 +5,12 @@ class TransactionsController < ApplicationController
 
     def create
         @transaction = Transaction.new(transaction_params)
-        @transaction.crypto_price = "53000.00"
-        render 'new'
+        # @transaction.crypto_price = "53000.00"
+        if @transaction.valid?
+
+        else
+            render :new
+        end
     end
     
     private

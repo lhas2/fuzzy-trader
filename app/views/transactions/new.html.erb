@@ -1,10 +1,9 @@
 <div class="container">
-<%= simple_form_for @transaction do |f| %>
+<%= simple_form_for(@transaction) do |f| %>
     <h1>Add new transaction</h1>
-    <%= f.error_notification %>
     <div class="question">
         <p>I want to invest</p>
-        <%= f.input :fiat_value, error: 'oi' %>
+        <%= f.input :fiat_value, label: false %>
         <%= f.input :fiat_currency, as: :select, label: false, collection: ["BRL", "USD"], default: "BRL" %>
         <p>in...</p>
         <%= f.input :crypto_currency, label: false, as: :radio_buttons, collection: ["BTC", "ETH", "LTC"] %>
