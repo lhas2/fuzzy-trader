@@ -7,9 +7,9 @@ module CryptoHelper
         balance.round(8)
     end
 
-    def crypto_current_price(crypto)
-        return number_to_currency(9500) if crypto == "BTC"
-        return number_to_currency(210) if crypto == "ETH"
-        return number_to_currency(44) if crypto == "LTC"
+    def crypto_current_price(current_price, crypto, format = true)
+        response = current_price.find{|item| item['symbol'] == crypto}
+
+        format ? number_to_currency(response['priceUsd']) : BigDecimal(response['priceUsd'])
     end
 end

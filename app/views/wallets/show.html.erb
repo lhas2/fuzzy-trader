@@ -7,10 +7,11 @@
         <div class="crypto">
             <p>
                 <strong><%= image_tag "#{crypto.downcase}.png" %> <%= crypto_balance(@transactions, crypto) %> <%= crypto %> </strong>
-                <em>Current price: <%= crypto_current_price(crypto) %> USD</em>
+                <em>Current price: <%= crypto_current_price(@current_price, crypto) %> USD</em>
             </p>
         </div>
     <% end %>
-    <p>Your current balance: <strong><%= number_to_currency(500) %> USD</strong></p>
+    <p>Your invested balance: <strong><%= fiat_invested_balance(@current_price, @transactions) %> USD</strong></p>
+    <p>Your current balance: <strong><%= fiat_balance(@current_price, @transactions) %> USD (<%= fiat_variation(@current_price, @transactions)%>)</strong></p>
     <a href="<%= url_for root_path %>" class="button button--flat">Back</a>
 </div>

@@ -6,9 +6,7 @@
         <%= f.input :fiat_value, label: false, as: :string %>
         <%= f.input :fiat_currency, as: :select, label: false, collection: FIAT_CURRENCIES, default: "BRL" %>
         <p>in...</p>
-        <%= f.input :crypto_currency, label: false, as: :radio_buttons, collection: CRYPTO_CURRENCIES do |radio| %>
-            <%= radio %>
-        <% end %>
+        <%= f.input :crypto_currency, label: false, as: :radio_buttons, collection: CRYPTO_CURRENCIES %>
     </div>
     <button type="submit" class="button">Add transaction</button>
     <a href="<%= url_for root_path %>" class="button button--flat">Back</a>
