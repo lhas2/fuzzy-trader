@@ -1,4 +1,6 @@
 module FiatHelper
+    include CryptoHelper
+
     def fiat_balance(current_price, transactions, format = true)
         response = 0
 

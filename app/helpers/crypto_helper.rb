@@ -10,6 +10,8 @@ module CryptoHelper
     def crypto_current_price(current_price, crypto, format = true)
         response = current_price.find{|item| item['symbol'] == crypto}
 
+        return 0 if response.nil?
+
         format ? number_to_currency(response['priceUsd']) : BigDecimal(response['priceUsd'])
     end
 end
