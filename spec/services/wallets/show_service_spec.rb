@@ -5,8 +5,9 @@ RSpec.describe 'Wallets::ShowService' do
         allow(Crypto::CurrentPriceService).to receive(:execute).and_return([{"symbol" => "BTC", "priceUsd" => "10000.00"}])
     end
 
-    it 'should return all transactions' do
+    it 'should return a valid response' do
         response = Wallets::ShowService.execute
         expect(response[:status]).to eq :success
+        expect(response[:current_price]).to eq([{"symbol" => "BTC", "priceUsd" => "10000.00"}])
     end
 end
