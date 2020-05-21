@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Transactions::CreateService' do
+    before(:each) do
+        allow(Crypto::CurrentPriceService).to receive(:execute).and_return([{"symbol" => "BTC", "priceUsd" => "10000.00"}])
+    end
+
     context 'valid transaction' do
         it 'should return success' do
-            allow(Crypto::CurrentPriceService).to receive(:execute).and_return([{"symbol" => "BTC", "priceUsd" => "10000.00"}])
             params = {
                 fiat_currency: 'USD',
                 fiat_value: 1000.00,
@@ -16,7 +19,6 @@ RSpec.describe 'Transactions::CreateService' do
 
     context 'invalid transaction' do
         it 'should return error' do
-            allow(Crypto::CurrentPriceService).to receive(:execute).and_return([{"symbol" => "BTC", "priceUsd" => "10000.00"}])
             params = {
                 fiat_currency: 'USD',
                 crypto_currency: 'BTC'

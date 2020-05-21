@@ -1,6 +1,8 @@
 class WalletsController < ApplicationController
     def show
-        @transactions = Transaction.all
-        @current_price = Crypto::CurrentPriceService.execute
+        response = Wallets::ShowService.execute
+
+        @transactions = response[:transactions]
+        @current_price = response[:current_price]
     end
 end
