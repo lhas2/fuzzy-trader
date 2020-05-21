@@ -11,6 +11,7 @@ module FiatHelper
 
         format ? number_to_currency(response) : BigDecimal(response)
     end
+
     def fiat_invested_balance(current_price, transactions, format = true)
         response = 0
 
